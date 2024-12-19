@@ -25,6 +25,10 @@ body {
     box-shadow: 0 0 10px lightgray;
 }
 
+#content {
+    padding: 50px;
+}
+
 #project-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
