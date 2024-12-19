@@ -7,6 +7,8 @@ const testData = JSON.parse(testJSON);
 const test = new Project(testData);
 test.addEntry(["test", "test2", "test3", "test4"]);
 
-console.log(test);
-console.log(test.toDoList[0])
+const testJSON2 = JSON.stringify(test);
+const testData2 = JSON.parse(testJSON2);
+
+console.log(testData2);
 
