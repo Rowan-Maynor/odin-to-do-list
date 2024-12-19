@@ -5,7 +5,8 @@ const testJSON = '{"name": "test"}';
 const testData = JSON.parse(testJSON);
 
 const test = new Project(testData);
-const test2 = new Project({name: "test2", toDoList: ["Test2", "Test3"]})
+test.addEntry(["test", "test2", "test3", "test4"]);
 
 console.log(test);
+console.log(test.toDoList[0])
 
