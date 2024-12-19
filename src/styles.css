@@ -40,7 +40,7 @@ body {
     border-radius: 18px;
     box-shadow: 0 0 10px lightgray;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 10px;
 }
 
@@ -77,4 +77,10 @@ body {
     height: 200px;
     width: 15px;
     background-image: linear-gradient( var(--card-bg-color) , lightgray 5% 95%, var(--card-bg-color));
+}
+
+.project-name {
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+    padding-bottom: 5px;
 }
