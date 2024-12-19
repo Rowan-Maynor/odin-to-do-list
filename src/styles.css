@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: rgb(240, 240, 240);
+    --bg-color: rgb(240, 240, 240);
+    background-color: var(--bg-color);
 }
 
 .flex-container {
@@ -41,7 +42,14 @@ body {
 }
 
 #new-project-card {
+    --card-bg-color: white;
     position: relative;
+    border: solid 12px white;
+    background-color: var(--card-bg-color);
+}
+
+#new-project-card:hover {
+    --card-bg-color: var(--bg-color);
 }
 
 #plus-horizontal, #plus-vertial {
@@ -49,21 +57,21 @@ body {
 }
 
 #plus-horizontal {
-    top: 240px;
+    top: 230px;
     left: 0;
     right: 0;
     margin-inline: auto;
-    width: 220px;
+    width: 200px;
     height: 15px;
-    background-image: linear-gradient(to right, white , lightgray 5% 95%, white);
+    background-image: linear-gradient(to right, var(--card-bg-color), lightgray 5% 95%, var(--card-bg-color));
 }
 
 #plus-vertial {
-    top: 135px;
+    top: 138px;
     left: 0;
     right: 0;
     margin-inline: auto;
-    height: 220px;
+    height: 200px;
     width: 15px;
-    background-image: linear-gradient( white , lightgray 5% 95%, white);
+    background-image: linear-gradient( var(--card-bg-color) , lightgray 5% 95%, var(--card-bg-color));
 }
