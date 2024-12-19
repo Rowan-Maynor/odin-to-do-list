@@ -48,6 +48,12 @@ body {
     align-items: stretch;
     padding: 10px;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+.project-card::-webkit-scrollbar {
+    display: none;
 }
 
 #new-project-card {
