@@ -1,14 +1,13 @@
 import Project from "./project";
 import "./styles.css";
 
-const testJSON = '{"name": "test"}';
-const testData = JSON.parse(testJSON);
+let projects = [];
 
-const test = new Project(testData);
-test.addEntry(["test", "test2", "test3", "test4"]);
+const newProjectCard = document.querySelector("#new-project-card");
 
-const testJSON2 = JSON.stringify(test);
-const testData2 = JSON.parse(testJSON2);
-
-console.log(testData2);
+newProjectCard.addEventListener("click", () => {
+    const newProject = new Project({name: "test4"});
+    projects.push(newProject);
+    console.log(projects);
+});
 
