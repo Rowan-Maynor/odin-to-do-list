@@ -1,5 +1,3 @@
-import removeChildren from "./removeChildren.js"
-
 export default function renderProjects(array) {
     if(array == []){
         return
@@ -7,7 +5,10 @@ export default function renderProjects(array) {
 
     const projectContainer = document.querySelector("#project-container");
     removeChildren(projectContainer);
+    //used to create project id's
     let i = 0;
+    //used to create entry id's
+    let j = 0;
 
     for (const project of array) {
         //create div for project card
@@ -17,10 +18,23 @@ export default function renderProjects(array) {
         const projectName = createProjectName(i, project.name);
         projectCard.append(projectName);
 
+        //create to do entries
+        generateEntries(i, j, project.toDoList, projectCard);
+
         //append new card to container
         projectContainer.prepend(projectCard);
-        //iterate i
-        i++
+        i++;
+    }
+}
+
+function removeChildren(parent){
+    while(parent.lastChild) {
+        //need if statement so make sure that the create new project isnt removed
+        if (parent.firstChild.id != "new-project-card"){
+            parent.removeChild(parent.firstChild);
+        } else {
+            return
+        }
     }
 }
 
@@ -39,4 +53,35 @@ function createProjectName(i, name) {
     projectName.textContent = name;
 
     return projectName;
+}
+
+function generateEntries(i, j, array, parent) {
+    for (const entry of array) {
+        //create div to contain entry information
+        const newEntry = createToDoEntryDiv(i, j);
+
+        //create name for entry
+        const entryName = createToDoName(j, entry[0]);
+        newEntry.append(entryName);
+
+        parent.append(newEntry);
+        j++;
+    }
+}
+
+function createToDoEntryDiv(i, j) {
+    const entryDiv = document.createElement("div");
+    entryDiv.id = `project-${i}-entry-${j}`
+    entryDiv.classList = "grid-container entry-container"
+
+    return entryDiv;
+}
+
+function createToDoName(j, name) {
+    const entryName = document.createElement("p");
+    entryName.id = `entry-${j}-name`;
+    entryName.classList = "entry-name";
+    entryName.textContent = name;
+
+    return entryName;
 }
