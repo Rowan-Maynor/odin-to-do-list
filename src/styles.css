@@ -12,6 +12,12 @@ body {
     display: flex;
 }
 
+#project-container {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .header {
     font-size: 3em;
     justify-content: center;
