@@ -68,6 +68,10 @@ function generateEntries(i, j, array, parent) {
         const entryDueDate = createEntryDueDate(j, entry[2]);
         newEntry.append(entryDueDate);
 
+        //create priority for entry
+        const entryPriority = createEntryPriority(j, entry[3]);
+        newEntry.append(entryPriority);
+
         parent.append(newEntry);
         j++;
     }
@@ -100,5 +104,10 @@ function createEntryDueDate(j, date) {
 }
 
 function createEntryPriority(j, priority) {
+    const entryPriority = document.createElement("p");
+    entryPriority.id = `entry-${j}-priority`;
+    entryPriority.classList = "entry-priority";
+    entryPriority.textContent = priority;
 
+    return entryPriority;
 }
