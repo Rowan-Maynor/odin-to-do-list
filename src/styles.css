@@ -39,3 +39,31 @@ body {
     border-radius: 18px;
     box-shadow: 0 0 10px lightgray;
 }
+
+#new-project-card {
+    position: relative;
+}
+
+#plus-horizontal, #plus-vertial {
+    position: absolute;
+}
+
+#plus-horizontal {
+    top: 230px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 220px;
+    height: 15px;
+    background-image: linear-gradient(to right, white , lightgray 3% 97%, white);
+}
+
+#plus-vertial {
+    top: 130px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    height: 220px;
+    width: 15px;
+    background-image: linear-gradient( white , lightgray 3% 97%, white);
+}
