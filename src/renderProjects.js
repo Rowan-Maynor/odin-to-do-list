@@ -1,9 +1,12 @@
+import removeChildren from "./removeChildren.js"
+
 export default function renderProjects(array) {
     if(array == []){
         return
     }
 
     const projectContainer = document.querySelector("#project-container");
+    removeChildren(projectContainer);
     let i = 0;
     for (const project of array) {
         //create div for project card
