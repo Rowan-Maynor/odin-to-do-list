@@ -27,7 +27,7 @@ export default function renderProjects(array) {
 function createProjectCard(i) {
     const projectCard = document.createElement("div");
     projectCard.id = `project-card-${i}`;
-    projectCard.classList = "project-card";
+    projectCard.classList = "flex-container project-card";
 
     return projectCard;
 }
