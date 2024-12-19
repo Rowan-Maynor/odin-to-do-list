@@ -12,10 +12,6 @@ body {
     display: flex;
 }
 
-.grid-container {
-    display: grid;
-}
-
 .header {
     font-size: 3em;
     justify-content: center;
@@ -27,10 +23,6 @@ body {
 
 #content {
     padding: 50px;
-}
-
-#project-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .project-card {
