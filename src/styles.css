@@ -13,6 +13,10 @@ body {
     display: flex;
 }
 
+.grid-container {
+    display: grid;
+}
+
 #project-container {
     justify-content: center;
     gap: 20px;
@@ -83,4 +87,8 @@ body {
     border-bottom: 1px solid lightgrey;
     text-align: center;
     padding-bottom: 5px;
+}
+
+.entry-container {
+    grid-template-columns: 1fr 1fr 1fr;
 }

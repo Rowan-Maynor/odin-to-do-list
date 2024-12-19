@@ -58,7 +58,7 @@ function createProjectName(i, name) {
 function generateEntries(i, j, array, parent) {
     for (const entry of array) {
         //create div to contain entry information
-        const newEntry = createToDoEntryDiv(i, j);
+        const newEntry = createEntryDiv(i, j);
 
         //create name for entry
         const entryName = createEntryName(j, entry[0]);
@@ -81,7 +81,7 @@ function generateEntries(i, j, array, parent) {
     }
 }
 
-function createToDoEntryDiv(i, j) {
+function createEntryDiv(i, j) {
     const entryDiv = document.createElement("div");
     entryDiv.id = `project-${i}-entry-${j}`
     entryDiv.classList = "grid-container entry-container"
