@@ -84,9 +84,11 @@ body {
 }
 
 .project-name {
+    --spacing: 5px;
     border-bottom: 1px solid lightgrey;
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: var(--spacing);
+    margin-bottom: var(--spacing);
 }
 
 .entry-container {
