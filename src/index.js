@@ -1,4 +1,4 @@
-import Project from "./projectTemplate";
+import Project from "./project";
 import "./styles.css";
 
 const testJSON = '{"name": "test", "description": "test2"}';
