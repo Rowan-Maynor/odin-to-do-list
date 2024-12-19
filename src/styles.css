@@ -32,3 +32,12 @@ body {
 #project-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.project-card {
+    --card-height: 500px;
+    height: var(--card-height);
+    width: calc(var(--card-height) - 100px);
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 10px lightgray;
+}
