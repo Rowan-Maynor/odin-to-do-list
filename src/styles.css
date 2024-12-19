@@ -55,7 +55,7 @@ body {
     margin-inline: auto;
     width: 220px;
     height: 15px;
-    background-image: linear-gradient(to right, white , lightgray 3% 97%, white);
+    background-image: linear-gradient(to right, white , lightgray 5% 95%, white);
 }
 
 #plus-vertial {
@@ -65,5 +65,5 @@ body {
     margin-inline: auto;
     height: 220px;
     width: 15px;
-    background-image: linear-gradient( white , lightgray 3% 97%, white);
+    background-image: linear-gradient( white , lightgray 5% 95%, white);
 }
