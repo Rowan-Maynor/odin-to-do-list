@@ -61,8 +61,12 @@ function generateEntries(i, j, array, parent) {
         const newEntry = createToDoEntryDiv(i, j);
 
         //create name for entry
-        const entryName = createToDoName(j, entry[0]);
+        const entryName = createEntryName(j, entry[0]);
         newEntry.append(entryName);
+
+        //create due date for entry
+        const entryDueDate = createEntryDueDate(j, entry[2]);
+        newEntry.append(entryDueDate);
 
         parent.append(newEntry);
         j++;
@@ -77,11 +81,24 @@ function createToDoEntryDiv(i, j) {
     return entryDiv;
 }
 
-function createToDoName(j, name) {
+function createEntryName(j, name) {
     const entryName = document.createElement("p");
     entryName.id = `entry-${j}-name`;
     entryName.classList = "entry-name";
     entryName.textContent = name;
 
     return entryName;
+}
+
+function createEntryDueDate(j, date) {
+    const entryDueDate = document.createElement("p");
+    entryDueDate.id = `entry-${j}-date`;
+    entryDueDate.classList = "entry-date";
+    entryDueDate.textContent = date;
+
+    return entryDueDate;
+}
+
+function createEntryPriority(j, priority) {
+
 }
