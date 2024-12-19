@@ -92,3 +92,7 @@ body {
 .entry-container {
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.entry-description {
+    grid-column: span 3;
+}
