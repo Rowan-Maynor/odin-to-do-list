@@ -12,6 +12,10 @@ body {
     display: flex;
 }
 
+.grid-container {
+    display: grid;
+}
+
 .header {
     font-size: 3em;
     justify-content: center;
@@ -19,4 +23,8 @@ body {
     padding-bottom: 30px;
     background-color: white;
     box-shadow: 0 0 10px lightgray;
+}
+
+#project-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
