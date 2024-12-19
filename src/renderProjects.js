@@ -72,6 +72,10 @@ function generateEntries(i, j, array, parent) {
         const entryPriority = createEntryPriority(j, entry[3]);
         newEntry.append(entryPriority);
 
+        //create description for entry
+        const entryDescription = createEntryDescription(j, entry[1]);
+        newEntry.append(entryDescription);
+
         parent.append(newEntry);
         j++;
     }
@@ -110,4 +114,13 @@ function createEntryPriority(j, priority) {
     entryPriority.textContent = priority;
 
     return entryPriority;
+}
+
+function createEntryDescription(j, description) {
+    const entryDescription = document.createElement("p");
+    entryDescription.id = `entry-${j}-description`;
+    entryDescription.classList = "entry-description";
+    entryDescription.textContent = description;
+
+    return entryDescription;
 }
