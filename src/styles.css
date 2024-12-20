@@ -70,11 +70,11 @@ body {
     --card-bg-color: var(--bg-color);
 }
 
-#plus-horizontal, #plus-vertial {
+#project-plus-horizontal, #project-plus-vertial {
     position: absolute;
 }
 
-#plus-horizontal {
+#project-plus-horizontal {
     top: 230px;
     left: 0;
     right: 0;
@@ -84,7 +84,7 @@ body {
     background-image: linear-gradient(to right, var(--card-bg-color), lightgray 5% 95%, var(--card-bg-color));
 }
 
-#plus-vertial {
+#project-plus-vertial {
     top: 138px;
     left: 0;
     right: 0;
