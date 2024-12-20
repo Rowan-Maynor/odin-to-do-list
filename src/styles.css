@@ -51,6 +51,7 @@ body {
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none; 
+    border-bottom: solid white 10px;
 }
 
 .project-card::-webkit-scrollbar {
