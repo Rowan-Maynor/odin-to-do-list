@@ -172,6 +172,10 @@ body {
     outline: none;
 }
 
+#project-name-input:hover {
+    background-color: var(--bg-color);
+}
+
 #submit-name-btn {
     width: 400px;
     height: 45px;
