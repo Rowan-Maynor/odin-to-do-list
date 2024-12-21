@@ -7,6 +7,7 @@ export default function createNewProjectOverlay() {
     //create input container
     const inputContainer = document.createElement("div");
     inputContainer.id = "input-container";
+    inputContainer.classList = "flex-container";
 
     //create header for input
     const inputHeader = document.createElement("p");
