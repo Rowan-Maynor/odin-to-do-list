@@ -1,12 +1,8 @@
 import { getProjects } from "./projectList";
 
 export default function renderProjects(array) {
-    // const projects = getProjects();
-    // if (!projects) {
-    //     return
-    // }
-
-    if(array == []){
+    const projects = getProjects();
+    if (!projects) {
         return
     }
 
@@ -17,7 +13,7 @@ export default function renderProjects(array) {
     //used to create entry id's
     let j = 0;
 
-    for (const project of array) {
+    for (const project of projects) {
         //create div for project card
         const projectCard = createProjectCard(i);
 
