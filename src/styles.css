@@ -193,12 +193,34 @@ body {
 }
 
 .new-entry-button {
+    --btn-bg-color: white;
     height: 50px;
-    background-color: white;
+    background-color: var(--btn-bg-color);
     border: none;
     border-radius: var(--border-radius);
+    position: relative;
 }
 
 .new-entry-button:hover {
-    background-color: var(--bg-color);
+    --btn-bg-color: var(--bg-color);
+}
+
+#new-entry-plus-horizontal, #new-entry-plus-vertical {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    background-image: linear-gradient(to right, var(--btn-bg-color), lightgray 5% 95%, var(--btn-bg-color));
+}
+
+#new-entry-plus-horizontal {
+    width: 30px;
+    height: 5px;
+    top: 20px;
+}
+
+#new-entry-plus-vertical {
+    width: 5px;
+    height: 30px;
+    top: 8px;
 }
