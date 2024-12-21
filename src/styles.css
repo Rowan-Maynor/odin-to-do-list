@@ -171,3 +171,13 @@ body {
 #project-name-input:focus-visible {
     outline: none;
 }
+
+#submit-name-btn {
+    width: 400px;
+    height: 45px;
+    background: none;
+    border: none;
+    border-top: solid lightgray 1px;
+    margin-top: auto;
+    font-size: 1.2em;
+}
