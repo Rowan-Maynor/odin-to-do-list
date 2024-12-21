@@ -185,3 +185,9 @@ body {
     margin-top: auto;
     font-size: 1.2em;
 }
+
+#submit-name-btn:hover {
+    background-color: var(--bg-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
