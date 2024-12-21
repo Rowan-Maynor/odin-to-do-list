@@ -24,6 +24,9 @@ export default function renderProjects() {
         //create to do entries
         generateEntries(i, j, project.toDoList, projectCard);
 
+        const newEntryButton = createNewEntry(i);
+        projectCard.append(newEntryButton);
+
         //append new card to container
         projectContainer.prepend(projectCard);
         i++;
@@ -126,4 +129,27 @@ function createEntryDescription(j, description) {
     entryDescription.textContent = description;
 
     return entryDescription;
+}
+
+function createNewEntry(i) {
+    //create newEntryButton
+    const newEntryButton = document.createElement("button");
+    newEntryButton.id = `new-entry-${i}`;
+    newEntryButton.classList = "new-entry-button";
+
+    //create divs for plus icon
+    const newEntryPlusHorizontal = document.createElement("div");
+    newEntryPlusHorizontal.id = "new-entry-plus-horizontal";
+    newEntryButton.append(newEntryPlusHorizontal);
+    const newEntryPlusVertical = document.createElement("div");
+    newEntryPlusVertical.id = "new-entry-plus-vertical";
+    newEntryButton.append(newEntryPlusVertical);
+
+    //create click event for button
+    newEntryButton.addEventListener("click", ()=>{
+        //worry about this in a min
+    })
+
+    //attach to parent
+    return newEntryButton;
 }
