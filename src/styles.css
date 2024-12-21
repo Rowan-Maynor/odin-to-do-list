@@ -153,3 +153,8 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+#input-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
