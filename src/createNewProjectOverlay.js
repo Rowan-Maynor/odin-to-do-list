@@ -24,6 +24,7 @@ export default function createNewProjectOverlay() {
     //create button for input submission
     const submit = document.createElement("button");
     submit.id = "submit-name-btn";
+    submit.textContent = "Submit";
     inputContainer.append(submit);
 
     //event listener for button should be added on 
