@@ -1,4 +1,11 @@
+import { getProjects } from "./projectList";
+
 export default function renderProjects(array) {
+    // const projects = getProjects();
+    // if (!projects) {
+    //     return
+    // }
+
     if(array == []){
         return
     }
