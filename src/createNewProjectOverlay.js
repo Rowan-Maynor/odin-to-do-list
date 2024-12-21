@@ -1,3 +1,7 @@
+import { getProjects, saveProjects } from "./projectList";
+import Project from "./project";
+import renderProjects from "./renderProjects";
+
 export default function createNewProjectOverlay() {
     //create container div
     const overlayContainer = document.createElement("div");
@@ -27,8 +31,17 @@ export default function createNewProjectOverlay() {
     submit.textContent = "Submit";
     inputContainer.append(submit);
 
-    //event listener for button should be added on 
-    //index to have access to projects[]
+    submit.addEventListener("click", ()=>{
+        let projects = []
+        if (getProjects()){
+            projects = getProjects();
+        }
+        const newProject = new Project({name: `${input.value}`});
+        projects.push(newProject);
+        saveProjects(projects);
+        overlayContainer.remove();
+        renderProjects();
+    })
 
     //attach module to overlay container
     overlayContainer.append(inputContainer);

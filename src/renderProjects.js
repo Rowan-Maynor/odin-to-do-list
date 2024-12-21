@@ -1,6 +1,6 @@
 import { getProjects } from "./projectList";
 
-export default function renderProjects(array) {
+export default function renderProjects() {
     const projects = getProjects();
     if (!projects) {
         return
