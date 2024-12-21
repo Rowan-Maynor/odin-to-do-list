@@ -191,3 +191,14 @@ body {
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
 }
+
+.new-entry-button {
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.new-entry-button:hover {
+    background-color: var(--bg-color);
+}
