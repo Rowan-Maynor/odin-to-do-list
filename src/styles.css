@@ -228,7 +228,7 @@ input[type=text]:hover {
 }
 
 #task-due-date-input {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 #task-description-input {
@@ -242,4 +242,8 @@ input[type=text]:hover {
 
 #task-description-input:hover {
     background-color: var(--bg-color);
+}
+
+#task-priority-input {
+    margin-top: 12px;
 }
