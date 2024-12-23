@@ -9,6 +9,7 @@ export default class Project {
         }
     }
 
+    //title[0], description[1], dueDate[2], priority[3]
     addEntry = function(values) {
         const newEntry = [values[0], values[1], values[2], values[3]];
         this.toDoList.push(newEntry);
