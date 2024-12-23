@@ -44,7 +44,7 @@ function createTextArea(value, parent){
     const noSpace = valueLower.replaceAll(" ", "-");
     const input = document.createElement("textarea");
     input.id = `task-${noSpace}-input`;
-    input.rows = "6";
+    input.rows = "12";
     input.cols = "35";
     input.placeholder = `${value}`;
     parent.append(input);  
