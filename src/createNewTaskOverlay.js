@@ -10,10 +10,10 @@ export default function createNewTaskOverlay() {
     taskInputContainer.classList = "flex-container";
 
     //create input fields
-    createInput("Title", taskInputContainer);
-    createInput("Description", taskInputContainer);
-    createInput("Due Date", taskInputContainer);
-    createInput("Priority", taskInputContainer);
+    createTextInput("Title", taskInputContainer);
+    createTextInput("Description", taskInputContainer);
+    createTextInput("Due Date", taskInputContainer);
+    createTextInput("Priority", taskInputContainer);
 
     //create button for input submission
     const submit = document.createElement("button");
@@ -29,7 +29,7 @@ export default function createNewTaskOverlay() {
     document.body.append(overlayContainer);
 }
 
-function createInput(value, parent){
+function createTextInput(value, parent){
     let valueLower = value.toLowerCase();
     const noSpace = valueLower.replaceAll(" ", "-");
     const input = document.createElement("input");
