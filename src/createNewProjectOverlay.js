@@ -13,16 +13,11 @@ export default function createNewProjectOverlay() {
     inputContainer.id = "input-container";
     inputContainer.classList = "flex-container";
 
-    //create header for input
-    const inputHeader = document.createElement("p");
-    inputHeader.id = "input-header";
-    inputHeader.textContent = "Project Name"
-    inputContainer.append(inputHeader);
-
     //create input for project name
     const input = document.createElement("input");
     input.id = "project-name-input"
     input.type = "text"
+    input.placeholder = "Project Name"
     inputContainer.append(input);
 
     //create button for input submission
