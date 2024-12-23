@@ -139,7 +139,7 @@ body {
 }
 
 #overlay-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: #80808080;
     z-index: 1;
