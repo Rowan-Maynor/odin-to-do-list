@@ -144,13 +144,15 @@ body {
     justify-content: center;
 }
 
-#project-input-container {
+#project-input-container, #task-input-container{
     background-color: white;
-    width: 400px;
-    height: 150px;
     border-radius: var(--border-radius);
     flex-direction: column;
     align-items: center;
+}
+#project-input-container {
+    width: 400px;
+    height: 150px;
 }
 
 input[type=text] {
