@@ -170,11 +170,11 @@ input[type=text] {
     margin-top: 40px;
 }
 
-#project-name-input:focus-visible {
+input[type=text]:focus-visible {
     outline: none;
 }
 
-#project-name-input:hover {
+input[type=text]:hover {
     background-color: var(--bg-color);
 }
 
