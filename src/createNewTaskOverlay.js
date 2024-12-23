@@ -15,6 +15,13 @@ export default function createNewTaskOverlay() {
     createInput("Due Date", taskInputContainer);
     createInput("Priority", taskInputContainer);
 
+    //create button for input submission
+    const submit = document.createElement("button");
+    submit.id = "submit-task-btn";
+    submit.classList = "submit-btn";
+    submit.textContent = "Submit";
+    taskInputContainer.append(submit);
+
     //attach module to overlay container
     overlayContainer.append(taskInputContainer);
 
