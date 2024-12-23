@@ -10,17 +10,23 @@ export default function createNewTaskOverlay() {
     taskInputContainer.classList = "flex-container";
 
     //create input fields
-    createInput("Title");
-    createInput("description");
-    createInput("Due Date");
-    createInput("Priority");
+    createInput("Title", taskInputContainer);
+    createInput("description", taskInputContainer);
+    createInput("Due Date", taskInputContainer);
+    createInput("Priority", taskInputContainer);
+
+    //attach module to overlay container
+    overlayContainer.append(taskInputContainer);
+
+    //attach entire overlay to body
+    document.body.append(overlayContainer);
 }
 
-function createInput(value){
+function createInput(value, parent){
     const valueLower = value.toLowerCase();
     const input = document.createElement("input");
     input.id = `task-${valueLower}-input`;
     input.type = "text";
     input.placeholder = `${value}`;
-    projectInputContainer.append(input);    
+    parent.append(input);    
 }

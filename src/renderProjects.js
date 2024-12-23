@@ -1,3 +1,4 @@
+import createNewTaskOverlay from "./createNewTaskOverlay";
 import { getProjects } from "./projectList";
 
 export default function renderProjects() {
@@ -148,7 +149,7 @@ function createNewEntry(i) {
 
     //create click event for button
     newEntryButton.addEventListener("click", ()=>{
-        //worry about this in a min
+        createNewTaskOverlay();
     })
 
     //attach to parent
