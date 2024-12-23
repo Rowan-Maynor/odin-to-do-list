@@ -11,7 +11,7 @@ export default function createNewTaskOverlay() {
 
     //create input fields
     createInput("Title", taskInputContainer);
-    createInput("description", taskInputContainer);
+    createInput("Description", taskInputContainer);
     createInput("Due Date", taskInputContainer);
     createInput("Priority", taskInputContainer);
 
