@@ -11,6 +11,10 @@ body {
     position: relative;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .flex-container {
     display: flex;
 }

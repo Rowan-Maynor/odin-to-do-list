@@ -2,7 +2,9 @@ import { getProjects, saveProjects } from "./projectList";
 import renderProjects from "./renderProjects";
 
 export default function createNewTaskOverlay(id) {
-    const projectId = id;
+    //add class to prevent scrolling while over is open
+    document.body.classList = "no-scroll";
+
     //create container div
     const overlayContainer = document.createElement("div");
     overlayContainer.id = "overlay-container";
@@ -37,10 +39,14 @@ export default function createNewTaskOverlay(id) {
 
         let projects = getProjects();
 
-        projects[projectId].toDoList.push(values);
-
+        projects[id].toDoList.push(values);
         saveProjects(projects);
+        
         overlayContainer.remove();
+
+        //remove no scroll
+        document.body.classList = "";
+
         renderProjects();
     })
 

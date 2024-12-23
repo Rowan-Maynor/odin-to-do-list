@@ -3,6 +3,9 @@ import Project from "./project";
 import renderProjects from "./renderProjects";
 
 export default function createNewProjectOverlay() {
+    //add class to prevent scrolling while over is open
+    document.body.classList = "no-scroll";
+
     //create container div
     const overlayContainer = document.createElement("div");
     overlayContainer.id = "overlay-container";
@@ -35,7 +38,12 @@ export default function createNewProjectOverlay() {
         const newProject = new Project({name: `${input.value}`});
         projects.push(newProject);
         saveProjects(projects);
+        
         overlayContainer.remove();
+
+        //remove no scroll
+        document.body.classList = "";
+
         renderProjects();
     })
 
