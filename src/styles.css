@@ -171,7 +171,7 @@ input[type=text] {
     background-color: var(--bg-color);
 }
 
-#submit-name-btn {
+.submit-btn {
     width: 400px;
     height: 45px;
     background: none;
@@ -181,7 +181,7 @@ input[type=text] {
     font-size: 1.2em;
 }
 
-#submit-name-btn:hover {
+.submit-btn:hover {
     background-color: var(--bg-color);
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
