@@ -11,7 +11,7 @@ export default function createNewTaskOverlay() {
 
     //create input fields
     createTextInput("Title", taskInputContainer);
-    createTextInput("Description", taskInputContainer);
+    createTextArea("Description", taskInputContainer);
     createTextInput("Due Date", taskInputContainer);
     createTextInput("Priority", taskInputContainer);
 
@@ -37,4 +37,15 @@ function createTextInput(value, parent){
     input.type = "text";
     input.placeholder = `${value}`;
     parent.append(input);    
+}
+
+function createTextArea(value, parent){
+    let valueLower = value.toLowerCase();
+    const noSpace = valueLower.replaceAll(" ", "-");
+    const input = document.createElement("textarea");
+    input.id = `task-${noSpace}-input`;
+    input.rows = "4";
+    input.cols = "10";
+    input.placeholder = `${value}`;
+    parent.append(input);  
 }
