@@ -157,7 +157,7 @@ body {
 }
 
 #task-input-container {
-    gap: 10px;
+    gap: 20px;
 }
 
 input[type=text] {
