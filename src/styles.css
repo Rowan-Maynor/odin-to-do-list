@@ -153,12 +153,6 @@ body {
     align-items: center;
 }
 
-#input-header {
-    font-size: 2em;
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
 #project-name-input {
     font-size: 1.8em;
     width: 300px;
