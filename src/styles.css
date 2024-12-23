@@ -150,9 +150,14 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 #project-input-container {
     width: 400px;
     height: 150px;
+}
+
+#task-input-container {
+    gap: 10px;
 }
 
 input[type=text] {
