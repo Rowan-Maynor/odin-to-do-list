@@ -23,9 +23,10 @@ export default function createNewTaskOverlay() {
 }
 
 function createInput(value, parent){
-    const valueLower = value.toLowerCase();
+    let valueLower = value.toLowerCase();
+    const noSpace = valueLower.replaceAll(" ", "-");
     const input = document.createElement("input");
-    input.id = `task-${valueLower}-input`;
+    input.id = `task-${noSpace}-input`;
     input.type = "text";
     input.placeholder = `${value}`;
     parent.append(input);    
