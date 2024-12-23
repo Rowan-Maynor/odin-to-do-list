@@ -24,6 +24,7 @@ export default function renderProjects() {
         //create to do entries
         generateEntries(i, j, project.toDoList, projectCard);
 
+        //create new entries button
         const newEntryButton = createNewEntry(i);
         projectCard.append(newEntryButton);
 
