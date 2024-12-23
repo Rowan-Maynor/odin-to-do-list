@@ -15,14 +15,15 @@ export default function createNewProjectOverlay() {
 
     //create input for project name
     const input = document.createElement("input");
-    input.id = "project-name-input"
-    input.type = "text"
-    input.placeholder = "Project Name"
+    input.id = "project-name-input";
+    input.type = "text";
+    input.placeholder = "Project Name";
     projectInputContainer.append(input);
 
     //create button for input submission
     const submit = document.createElement("button");
     submit.id = "submit-name-btn";
+    submit.classList = "submit-btn";
     submit.textContent = "Submit";
     projectInputContainer.append(submit);
 
