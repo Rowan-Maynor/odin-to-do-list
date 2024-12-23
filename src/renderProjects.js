@@ -149,7 +149,7 @@ function createNewEntry(i) {
 
     //create click event for button
     newEntryButton.addEventListener("click", ()=>{
-        createNewTaskOverlay();
+        createNewTaskOverlay(i);
     })
 
     //attach to parent
