@@ -9,22 +9,22 @@ export default function createNewProjectOverlay() {
     overlayContainer.classList = "flex-container";
 
     //create input container
-    const inputContainer = document.createElement("div");
-    inputContainer.id = "input-container";
-    inputContainer.classList = "flex-container";
+    const projectInputContainer = document.createElement("div");
+    projectInputContainer.id = "project-input-container";
+    projectInputContainer.classList = "flex-container";
 
     //create input for project name
     const input = document.createElement("input");
     input.id = "project-name-input"
     input.type = "text"
     input.placeholder = "Project Name"
-    inputContainer.append(input);
+    projectInputContainer.append(input);
 
     //create button for input submission
     const submit = document.createElement("button");
     submit.id = "submit-name-btn";
     submit.textContent = "Submit";
-    inputContainer.append(submit);
+    projectInputContainer.append(submit);
 
     submit.addEventListener("click", ()=>{
         let projects = []
@@ -39,7 +39,7 @@ export default function createNewProjectOverlay() {
     })
 
     //attach module to overlay container
-    overlayContainer.append(inputContainer);
+    overlayContainer.append(projectInputContainer);
 
     //attach entire overlay to body
     document.body.append(overlayContainer);
