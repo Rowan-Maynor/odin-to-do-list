@@ -197,6 +197,7 @@ input[type=text]:hover {
 
 .new-entry-button {
     --btn-bg-color: white;
+    flex-shrink: 0;
     height: 50px;
     background-color: var(--btn-bg-color);
     border: none;
