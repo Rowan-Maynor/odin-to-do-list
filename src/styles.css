@@ -40,7 +40,7 @@ body {
 
 .project-card {
     --spacing: 5px;
-    --card-height: 500px;
+    --card-height: 600px;
     height: var(--card-height);
     width: calc(var(--card-height) - 100px);
     background-color: white;
