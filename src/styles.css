@@ -153,7 +153,7 @@ body {
     align-items: center;
 }
 
-#project-name-input {
+input[type=text] {
     font-size: 1.8em;
     width: 300px;
     height: 35px;
