@@ -58,6 +58,7 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none; 
     border-bottom: solid white 10px;
+    position: relative;
 }
 
 .project-card::-webkit-scrollbar {
@@ -252,4 +253,15 @@ input[type=text]:hover {
 
 #task-priority-input {
     margin-top: 12px;
+}
+
+.remove-project-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    border: 2px lightgray solid;
+    background-color: white;
 }
