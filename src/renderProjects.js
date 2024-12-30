@@ -161,18 +161,22 @@ function createNewEntry(i) {
 }
 
 function createRemoveProject(i) {
+    //create container for remove project elements
     const removeProjectContainer = document.createElement("div");
     removeProjectContainer.id = `remove-project-container-${i}`;
     removeProjectContainer.classList = "remove-project-container";
 
+    //create first half of X symbol
     const removeSymbol1 = document.createElement("div");
     removeSymbol1.classList = "remove-symbol-1";
     removeProjectContainer.append(removeSymbol1);
 
+    //create second half of X symbol
     const removeSymbol2 = document.createElement("div");
     removeSymbol2.classList = "remove-symbol-2";
     removeProjectContainer.append(removeSymbol2);
 
+    //create button to remove project
     const removeButton = document.createElement("button");
     removeButton.id = `remove-project-button-${i}`;
     removeButton.classList = "remove-project-button";
