@@ -1,5 +1,5 @@
 import createNewTaskOverlay from "./createNewTaskOverlay";
-import { getProjects } from "./projectList";
+import { getProjects, saveProjects } from "./projectList";
 
 export default function renderProjects() {
     const projects = getProjects();
@@ -30,7 +30,7 @@ export default function renderProjects() {
         projectCard.append(newEntryButton);
 
         //create remove project button
-        const removeProjectButton = createRemoveProject(i);
+        const removeProjectButton = createRemoveProjectBtn(i);
         projectCard.append(removeProjectButton);
 
         //append new card to container
@@ -160,7 +160,7 @@ function createNewEntry(i) {
     return newEntryButton;
 }
 
-function createRemoveProject(i) {
+function createRemoveProjectBtn(i) {
     //create container for remove project elements
     const removeProjectContainer = document.createElement("div");
     removeProjectContainer.id = `remove-project-container-${i}`;
@@ -181,6 +181,13 @@ function createRemoveProject(i) {
     removeButton.id = `remove-project-button-${i}`;
     removeButton.classList = "remove-project-button";
     removeProjectContainer.append(removeButton);
+
+    removeButton.addEventListener("click", ()=>{
+        let projects = getProjects();
+        projects.splice(i, 1);
+        saveProjects(projects);
+        renderProjects();
+    });
 
     return removeProjectContainer;
 }
