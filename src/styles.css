@@ -256,6 +256,7 @@ input[type=text]:hover {
 }
 
 .remove-project-container {
+    --remove-btn-bg-color: white;
     height: 40px;
     width: 40px;
     position: absolute;
@@ -267,5 +268,22 @@ input[type=text]:hover {
     width: 40px;
     border-radius: 50%;
     border: 2px lightgray solid;
-    background-color: white;
+    background-color: var(--remove-btn-bg-color);
+}
+
+.remove-symbol-1, .remove-symbol-2 {
+    width: 2px;
+    height: 26px;
+    background-image: linear-gradient(to right, var(--remove-btn-bg-color), lightgray 5% 95%, var(--remove-btn-bg-color));
+    position: absolute;
+    top: 7px;
+    left: 19px;
+}
+
+.remove-symbol-1 {
+    rotate: -45deg;
+}
+
+.remove-symbol-2 {
+    rotate: 45deg;
 }
