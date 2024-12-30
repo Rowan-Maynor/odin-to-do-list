@@ -255,13 +255,17 @@ input[type=text]:hover {
     margin-top: 12px;
 }
 
+.remove-project-container {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    top: 7px;
+}
 .remove-project-button {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: 6px;
     border: 2px lightgray solid;
     background-color: white;
 }
