@@ -165,6 +165,14 @@ function createRemoveProject(i) {
     removeProjectContainer.id = `remove-project-container-${i}`;
     removeProjectContainer.classList = "remove-project-container";
 
+    const removeSymbol1 = document.createElement("div");
+    removeSymbol1.classList = "remove-symbol-1";
+    removeProjectContainer.append(removeSymbol1);
+
+    const removeSymbol2 = document.createElement("div");
+    removeSymbol2.classList = "remove-symbol-2";
+    removeProjectContainer.append(removeSymbol2);
+
     const removeButton = document.createElement("button");
     removeButton.id = `remove-project-button-${i}`;
     removeButton.classList = "remove-project-button";
