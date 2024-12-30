@@ -161,9 +161,14 @@ function createNewEntry(i) {
 }
 
 function createRemoveProject(i) {
-    const removeButton = document.createElement("button");
-    removeButton.id = `remove-project-${i}`;
-    removeButton.classList = "remove-project-button";
+    const removeProjectContainer = document.createElement("div");
+    removeProjectContainer.id = `remove-project-container-${i}`;
+    removeProjectContainer.classList = "remove-project-container";
 
-    return removeButton;
+    const removeButton = document.createElement("button");
+    removeButton.id = `remove-project-button-${i}`;
+    removeButton.classList = "remove-project-button";
+    removeProjectContainer.append(removeButton);
+
+    return removeProjectContainer;
 }
