@@ -29,6 +29,10 @@ export default function renderProjects() {
         const newEntryButton = createNewEntry(i);
         projectCard.append(newEntryButton);
 
+        //create remove project button
+        const removeProjectButton = createRemoveProject(i);
+        projectCard.append(removeProjectButton);
+
         //append new card to container
         projectContainer.prepend(projectCard);
         i++;
@@ -154,4 +158,12 @@ function createNewEntry(i) {
 
     //attach to parent
     return newEntryButton;
+}
+
+function createRemoveProject(i) {
+    const removeButton = document.createElement("button");
+    removeButton.id = `remove-project-${i}`;
+    removeButton.classList = "remove-project-button";
+
+    return removeButton;
 }
